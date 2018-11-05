@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  p Hi #{firstName},
+  p #{createdBy.firstName} has just awarded you #{kudosCoins} KudosCoins!
+  blockquote
+    i=reason
+  p Now you have #{kudosCoins} more KudosCoins to spend in the #[a(href=`${frontendUrl}/company/${companyId}/shop`) shop].
+  p
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

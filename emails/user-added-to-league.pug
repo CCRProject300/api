@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  p Hi,
+  p You have just been invited to the #{leagueName} league on KudosHealth.
+  p 
+    | Join the league NOW:
+    br
+    a(href=frontendUrl) #{leagueName}
+
+  p
+    | Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

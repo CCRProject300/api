@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  style.
+    p { font-family: sans-serif; }
+  p Hi #{transaction.user.firstName},
+  p Thank you for using the #{transaction.company.name} shop.
+  p Below are the details of your charity donation on #{moment(transaction.createdAt).format('ddd, Do MMM YYYY')}.
+  table(style='border-width: 0; width: 100%; max-width: 480px')
+    tr
+      td(style='padding: 6px; border: solid 1px gray;')
+        strong Charity
+      td(style='padding: 6px; border: solid 1px gray;')
+        strong Donation
+    tr
+      td(style='padding: 6px; border: solid 1px gray;')=transaction.data.bucket.name
+      td(style='padding: 6px; border: solid 1px gray;') #{-transaction.kudosCoins} KudosCoins
+  p Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

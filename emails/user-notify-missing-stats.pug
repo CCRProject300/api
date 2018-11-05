@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  p Hi #{name},
+  p To start collecting KudosPoints, you need to complete your Individual Statistics.
+  p The following are missing from your profile:
+  ul
+    each statistic in missingStats
+      li=statistic
+  p Once you have entered your individual statistics you&#39;ll be ready to connect a device and start contributing your KudosPoints to a league!
+  p It&#39;s easy to get started if you have a Fitbit, Strava, Runkeeper or a Google Fit account - just visit your settings page and choose to connect a device.
+  p
+    a(href=`${frontendUrl}/settings/`) Update your profile device
+  p
+    | Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

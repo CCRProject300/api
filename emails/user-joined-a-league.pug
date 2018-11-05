@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  p Hi,
+  p You have just been added to the league "#{leagueName}" on KudosHealth#{panelName ? ` in the category "${panelName}"` : ''}.
+  p 
+    | Start earning points NOW!
+    br
+    a(href=frontendUrl) #{leagueName}
+
+  p
+    | Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

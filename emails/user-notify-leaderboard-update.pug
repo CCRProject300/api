@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  - var leaderboardUrl = `${frontendUrl}/league/${leagueId}/leaderboard`
+  - var position = rankingProgress > 0 ? 'gained a' : 'lost your'
+  p Hi #{name},
+  p Your position has changed in the #[a(href=leaderboardUrl)=leagueName] league.
+  p You have #{position} position!
+  p Visit the leaderboard and see your current progress
+    a(href=leaderboardUrl) &nbsp;now
+
+  p
+    | Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

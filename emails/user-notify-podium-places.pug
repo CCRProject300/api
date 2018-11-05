@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  p=`Hi ${name},`
+  p=`This week's Top Performers on ${companyName} are ...`
+  ul
+    if podium[0]
+      li=`1st - ${podium[0].name}`
+    if podium[1]
+      li=`2nd - ${podium[1].name}`
+    if podium[2]
+      li=`3rd - ${podium[2].name}`
+  p Start collecting KudosPoints now, your team needs you!
+  p
+    a(href=`${frontendUrl}/profile`) Visit your dashboard
+  p
+    | Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

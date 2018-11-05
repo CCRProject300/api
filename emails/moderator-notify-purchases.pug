@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  p Hi,
+  p Members of your company have purchased #{count} new reward#{count > 1 ? 's' : ''} in the past 24 hours:
+  p
+    ul
+      each purchase in purchases
+        li #{purchase.user.firstName} #{purchase.user.lastName} bought: #{purchase.data.item.name}
+  p
+  p
+    | Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

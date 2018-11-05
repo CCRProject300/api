@@ -1,0 +1,19 @@
+{
+  "port": 4040,
+  "mongo": "mongodb://localhost/kudoshealth-test",
+  "frontendUrl": "http://localhost:4040",
+  "cron": {
+    "daily": "*/5 * * * * *",
+    "weekly": "*/12 * * * * *"
+  },
+  "email": {
+    "transport": null
+  },
+  "auth0": {
+    "clientId": "TEST"
+  },
+  "companyRoles": [
+    "roleA",
+    "roleB"
+  ]
+}

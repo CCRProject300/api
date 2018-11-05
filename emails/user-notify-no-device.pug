@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  p Hi #{user.firstName},
+  p Start collecting KudosPoints, your team needs you!
+  p It's easy to get started if you have a fitbit, strava, or runkeeper device. Just visit your settings page and choose to connect a device.
+  p If you don't have a device you can still be a part of KudosHealth and start collecting KudosPoints with your phone. Download the Google Fit app from your app store. Then visit the settings page and connect to Google Fit.
+  p 
+    a(href=`${frontendUrl}/settings/`) Connect a device
+  p
+    | Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl

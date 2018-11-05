@@ -1,0 +1,73 @@
+{
+  "name": "kudoshealth-api",
+  "version": "11.0.2",
+  "description": "KudosHealth API",
+  "private": true,
+  "main": "index.js",
+  "bin": {
+    "kudoshealth-api": "bin/start.js"
+  },
+  "scripts": {
+    "start": "node bin/start",
+    "test": "standard && NODE_ENV=test istanbul cover tape tests/*.js | faucet",
+    "watch": "nodemon bin/start",
+    "cron": "node bin/cron",
+    "tunnel:forever": "forever -f -c 'npm run tunnel' --spinSleepTime 5000 ./",
+    "tunnel": "lt -l 127.0.0.1 --port 4000 --subdomain kudoshealthapi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tableflip/kudoshealth-api.git"
+  },
+  "author": "TABLEFLIP",
+  "bugs": {
+    "url": "https://github.com/tableflip/kudoshealth-api/issues"
+  },
+  "homepage": "https://github.com/tableflip/kudoshealth-api#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "bcrypt-nodejs": "0.0.3",
+    "boom": "^5.1.0",
+    "config": "^1.20.4",
+    "good": "^7.0.1",
+    "good-console": "^6.1.2",
+    "hapi": "^16.4.3",
+    "hapi-auth-jwt2": "^7.2.4",
+    "joi": "^10.6.0",
+    "joi-objectid": "^2.0.0",
+    "joi-shortid": "^5.0.0",
+    "kudoshealth-lib": "tableflip/kudoshealth-lib#v4.1.0",
+    "lodash.flatten": "^4.2.0",
+    "lodash.get": "^4.3.0",
+    "lodash.pick": "^4.4.0",
+    "lodash.samplesize": "^4.2.0",
+    "lodash.uniq": "^4.3.0",
+    "lodash.without": "^4.4.0",
+    "moment-timezone": "^0.5.4",
+    "mongojs": "^2.4.0",
+    "nock": "^9.0.2",
+    "node-cron": "^1.1.1",
+    "nodemailer": "^4.0.1",
+    "nodemailer-html-to-text": "^2.1.0",
+    "nodemailer-plugin-inline-base64": "^2.0.0",
+    "nodemailer-stub-transport": "^1.0.0",
+    "ohmigrate": "^1.0.0",
+    "pug": "^2.0.0-beta5",
+    "request": "^2.79.0",
+    "require-directory": "^2.1.1",
+    "shortid": "^2.2.6",
+    "uploadcare": "^0.4.3"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "faucet": "0.0.1",
+    "forever": "^0.15.3",
+    "istanbul": "^0.4.5",
+    "localtunnel": "^1.8.2",
+    "nodemon": "^1.9.2",
+    "pre-commit": "^1.1.3",
+    "sinon": "^2.3.5",
+    "standard": "^10.0.2",
+    "tape": "^4.5.1"
+  }
+}

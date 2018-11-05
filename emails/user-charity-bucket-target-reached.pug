@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  style.
+    p { font-family: sans-serif; }
+  p Hi,
+  p Congratulations! The target for &quot;#{bucket.name}&quot; was just reached!
+  p You can see the final amount and who donated here:
+  p
+    a(href=frontendUrl + '/charity/' + bucket._id)
+  p Thanks,
+    br
+    | KudosHealth
+    br
+    a(href=frontendUrl)=frontendUrl
